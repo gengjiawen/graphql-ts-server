@@ -2,12 +2,21 @@
   "name": "graphql-ts-server",
   "version": "0.0.1",
   "description": "graphql-ts-server",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon --exec ts-node --files src/index.ts",
+    "build": "rimraf dist && cross-env NODE_ENV=development tsc",
+    "test": "cross-env NODE_ENV=test jest --forceExit",
+    "gen-schema-types": "ts-node scripts/createTypes.ts"
+  },
   "devDependencies": {
     "@types/bcryptjs": "2.4.1",
+    "@types/ioredis": "3.2.14",
     "@types/jest": "23.3.1",
     "@types/node": "10.5.8",
+    "@types/nodemailer": "4.6.2",
     "@types/uuid": "3.4.3",
     "@types/yup": "0.24.7",
+    "axios": "0.18.0",
     "gql2ts": "1.8.2",
     "jest": "23.5.0",
     "nodemon": "1.18.3",
@@ -28,9 +37,12 @@
     "graphql-request": "1.8.2",
     "graphql-tools": "3.1.1",
     "graphql-yoga": "1.16.0",
+    "ioredis": "3.2.2",
+    "nodemailer": "4.6.7",
     "pg": "7.4.3",
     "reflect-metadata": "0.1.12",
     "typeorm": "0.2.7",
+    "uuid": "^3.3.2",
     "yup": "0.26.2"
   },
   "jest": {
