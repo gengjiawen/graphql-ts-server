@@ -1,15 +1,10 @@
-import { startServer } from '../../../StartServer'
 import { request } from 'graphql-request'
 import { User } from '../../../entity/User'
-import { AddressInfo } from 'net'
 import { duplicateEmail } from '../ErrorMessages'
-
-let getHost = () => ''
+import { createTypeormConn } from '../../../utils/CreateTyepeormConn'
 
 beforeAll(async () => {
-  const app = await startServer()
-  const { port } = app.address() as AddressInfo
-  getHost = () => `http://localhost:${port}`
+  await createTypeormConn()
 })
 
 const email = 'tom@bob.com'
@@ -23,7 +18,8 @@ mutation {
   }
 }`
 test('register user', async () => {
-  const response = await request(getHost(), mutation(email, password))
+  const url = process.env.TEST_HOST as string
+  const response = await request(url, mutation(email, password))
   expect(response).toEqual({ register: null })
   const users = await User.find({ where: { email } })
   expect(users).toHaveLength(1)
@@ -32,7 +28,7 @@ test('register user', async () => {
   expect(user.password).not.toEqual(password)
 
   // test duplicate email
-  const response2: any = await request(getHost(), mutation(email, password))
+  const response2: any = await request(url, mutation(email, password))
   expect(response2.register).toHaveLength(1)
   expect(response2.register[0]).toEqual({
     path: 'email',
@@ -40,10 +36,10 @@ test('register user', async () => {
   })
 
   // catch bad password
-  const response3: any = await request(getHost(), mutation(email, 'ab'))
+  const response3: any = await request(url, mutation(email, 'ab'))
   expect(response3).toMatchSnapshot()
 
   // catch bad email and password
-  const response4: any = await request(getHost(), mutation('ab', 'cd'))
+  const response4: any = await request(url, mutation('ab', 'cd'))
   expect(response4).toMatchSnapshot()
 })
