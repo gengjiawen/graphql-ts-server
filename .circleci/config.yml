@@ -20,10 +20,8 @@ jobs:
         command: |
           source ~/.bashrc
           nvm install 10
-          nvm use 10
-          echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
-          echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
-    - run: yarn install
+          node --version
+          yarn install
     - save_cache:
         paths:
         - node_modules
