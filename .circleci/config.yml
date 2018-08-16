@@ -19,6 +19,7 @@ jobs:
         name: setup nodejs
         command: |
           source ~/.bashrc
+          nvm install 10
           nvm use 10
     - run: yarn install
     - save_cache:
