@@ -18,10 +18,11 @@ jobs:
     - run:
         name: setup nodejs
         command: |
-          echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
-          echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
+          source ~/.bashrc
           nvm install 10
           nvm use 10
+          echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
+          echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
     - run: yarn install
     - save_cache:
         paths:
