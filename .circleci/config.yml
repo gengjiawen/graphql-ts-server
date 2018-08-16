@@ -18,8 +18,8 @@ jobs:
     - run:
         name: setup nodejs
         command: |
-          source ~/.bashrc
-          nvm install 10
+          curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+          sudo apt-get install -y nodejs
     - run: yarn install
     - save_cache:
         paths:
