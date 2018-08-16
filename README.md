@@ -1,4 +1,5 @@
 # graphql-ts-server
+[![CircleCI](https://circleci.com/gh/gengjiawen/graphql-ts-server.svg?style=svg)](https://circleci.com/gh/gengjiawen/graphql-ts-server)
 
 An inspiration of https://github.com/benawad/graphql-ts-server-boilerplate.
 
