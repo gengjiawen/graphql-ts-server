@@ -3,6 +3,8 @@ jobs:
   build:
     machine: true
     working_directory: ~/repo
+    environment:
+      BASH_ENV: "~/.bashrc"
     steps:
     - checkout
     - restore_cache:
