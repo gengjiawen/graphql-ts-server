@@ -11,10 +11,10 @@ jobs:
         keys:
         - v1-dependencies-{{ checksum "package.json" }}
         - v1-dependencies-
-    - run: docker-compose up -d
     - run:
         name: setup nodejs
         command: nvm install 10
+    - run: docker-compose up -d
     - run: npm install
     - save_cache:
         paths:
