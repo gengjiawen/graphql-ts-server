@@ -10,9 +10,13 @@ jobs:
         - v1-dependencies-{{ checksum "package.json" }}
         - v1-dependencies-
     - run: docker-compose up -d
-    - run: yarn install
+    - run:
+        name: setup nodejs
+        command: nvm install 10
+    - run: npm install
     - save_cache:
         paths:
         - node_modules
         key: v1-dependencies-{{ checksum "package.json" }}
-    - run: yarn test
+    - run: npm build
+    - run: npm test
