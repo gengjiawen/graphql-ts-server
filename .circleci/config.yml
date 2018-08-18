@@ -18,9 +18,9 @@ jobs:
     - run:
         name: setup nodejs
         command: |
-          apt purge nodejs
+          sudo apt purge nodejs
           curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-          apt install -y nodejs
+          sudo apt install -y nodejs
           node --version
           yarn install
     - save_cache:
