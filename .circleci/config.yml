@@ -26,6 +26,16 @@ jobs:
         paths:
         - node_modules
         key: v1-dependencies-{{ checksum "package.json" }}
-    - run: yarn build
+    - run:
+        name: build
+        command: |
+          source ~/.bashrc
+          nvm install 10
+          yarn build
     - run: docker-compose up -d
-    - run: yarn test
+    - run:
+        name: test
+        command: |
+          source ~/.bashrc
+          nvm install 10
+          yarn test
