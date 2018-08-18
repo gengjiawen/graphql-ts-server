@@ -8,7 +8,6 @@ import {
 import { ResolverMap } from '../../types/GraphQLUtil'
 import { formatYupError } from '../../utils/FormatYupError'
 import { User } from '../../entity/User'
-import * as bcrypt from 'bcryptjs'
 import { createConfirmEmailLink, sendEmail } from '../../utils/SendEmail'
 
 const schema = yup.object().shape({
@@ -53,10 +52,9 @@ export const resolvers: ResolverMap = {
         ]
       }
 
-      const hashedPassword = await bcrypt.hash(password, 10)
       const user = User.create({
         email,
-        password: hashedPassword,
+        password,
       })
 
       await user.save()
