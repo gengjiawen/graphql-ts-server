@@ -18,15 +18,24 @@ jobs:
     - run:
         name: setup nodejs
         command: |
-          sudo apt purge nodejs
-          curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-          sudo apt install -y nodejs
+          source ~/.bashrc
+          nvm install 10
           node --version
           yarn install
     - save_cache:
         paths:
         - node_modules
         key: v1-dependencies-{{ checksum "package.json" }}
-    - run: yarn build
+    - run:
+        name: build
+        command: |
+          source ~/.bashrc
+          nvm install 10
+          yarn build
     - run: docker-compose up -d
-    - run: yarn test
+    - run:
+        name: test
+        command: |
+          source ~/.bashrc
+          nvm install 10
+          yarn test
