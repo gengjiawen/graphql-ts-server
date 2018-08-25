@@ -1,3 +1,5 @@
 import { startServer } from './StartServer'
 
-startServer()
+startServer().catch(error => {
+  console.log(error)
+})

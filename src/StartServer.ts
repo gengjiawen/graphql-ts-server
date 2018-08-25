@@ -1,26 +1,40 @@
-import { GraphQLServer } from 'graphql-yoga'
+import * as Koa from 'koa'
+import * as Router from 'koa-router'
+import * as cors from '@koa/cors'
+import * as koaBody from 'koa-body'
 import { createTypeormConn } from './utils/CreateTyepeormConn'
 import { genSchema } from './utils/GenSchema'
 import { redis } from './RedisInstance'
 import { confirmEmail } from './routes/ConfirmEmail'
+import { Request } from 'koa'
+import { ApolloServer } from 'apollo-server-koa'
 
 export const startServer = async () => {
   const schema = genSchema()
 
-  const server = new GraphQLServer({
+  const apolloServer = new ApolloServer({
     schema: schema,
-    context: ({ request }) => ({
+    context: ({ request }: { request: Request }) => ({
       redis,
       request,
     }),
   })
 
-  server.express.get('/confirm/:id', confirmEmail)
+  const app = new Koa()
+  apolloServer.applyMiddleware({ app, path: '/' })
+
+  app.use(koaBody({ multipart: true }))
+  const router = new Router()
+
+  router.get('/confirm/:id', confirmEmail)
 
   await createTypeormConn()
 
+  app.use(cors())
+  app.use(router.routes()).use(router.allowedMethods())
+
   const port: number = process.env.NODE_ENV === 'test' ? 9527 : 4000
-  const app = await server.start(
+  const server = app.listen(
     {
       port,
     },
@@ -29,5 +43,5 @@ export const startServer = async () => {
     }
   )
 
-  return app
+  return server
 }

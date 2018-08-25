@@ -1,15 +1,15 @@
-import { Request, Response } from 'express'
 import { redis } from '../RedisInstance'
 import { User } from '../entity/User'
+import { Context } from 'koa'
 
-export const confirmEmail = async (req: Request, res: Response) => {
-  const { id } = req.params
+export const confirmEmail = async (ctx: Context) => {
+  const { id } = ctx.params
   const userId = await redis.get(id)
   if (userId) {
     await User.update({ id: userId }, { confirmed: true })
     await redis.del(id)
-    res.send('ok')
+    ctx.body = 'ok'
   } else {
-    res.send('invalid')
+    ctx.body = 'invalid'
   }
 }
