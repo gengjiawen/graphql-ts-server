@@ -1,7 +1,6 @@
 import * as Koa from 'koa'
 import * as Router from 'koa-router'
 import * as cors from '@koa/cors'
-import * as koaBody from 'koa-body'
 import { createTypeormConn } from './utils/CreateTyepeormConn'
 import { genSchema } from './utils/GenSchema'
 import { redis } from './RedisInstance'
@@ -23,7 +22,6 @@ export const startServer = async () => {
   const app = new Koa()
   apolloServer.applyMiddleware({ app, path: '/' })
 
-  app.use(koaBody({ multipart: true }))
   const router = new Router()
 
   router.get('/confirm/:id', confirmEmail)
