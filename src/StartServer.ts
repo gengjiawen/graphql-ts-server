@@ -6,7 +6,7 @@ import { createTypeormConn } from './utils/CreateTyepeormConn'
 import { genSchema } from './utils/GenSchema'
 import { redis } from './RedisInstance'
 import { confirmEmail } from './routes/ConfirmEmail'
-import { Request } from 'koa'
+import { Context } from 'koa'
 import { ApolloServer } from 'apollo-server-koa'
 
 export const startServer = async () => {
@@ -14,9 +14,9 @@ export const startServer = async () => {
 
   const apolloServer = new ApolloServer({
     schema: schema,
-    context: ({ request }: { request: Request }) => ({
+    context: ({ ctx }: { ctx: Context }) => ({
       redis,
-      request,
+      request: ctx.request,
     }),
   })
 
