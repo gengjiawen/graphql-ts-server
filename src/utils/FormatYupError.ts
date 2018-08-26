@@ -1,12 +1,10 @@
 import { ValidationError } from 'yup'
+import { UserInputError } from 'apollo-server-koa'
 
 export const formatYupError = (error: ValidationError) => {
-  const errors: Array<{ path: string; message: string }> = []
+  const errors: Array<UserInputError> = []
   error.inner.forEach(e => {
-    errors.push({
-      path: e.path,
-      message: e.message,
-    })
+    errors.push(new UserInputError(e.message))
   })
 
   return errors
