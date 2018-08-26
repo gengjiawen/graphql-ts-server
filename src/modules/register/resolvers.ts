@@ -9,9 +9,8 @@ import { ResolverMap } from '../../types/GraphQLUtil'
 import { formatYupError } from '../../utils/FormatYupError'
 import { User } from '../../entity/User'
 import { createConfirmEmailLink, sendEmail } from '../../utils/SendEmail'
-import { sign } from 'jsonwebtoken'
-import { JWT_SECRET } from '../../utils/Consts'
 import { GraphQLError } from 'graphql'
+import { signUser } from '../../utils/JwtUtil'
 
 const schema = yup.object().shape({
   email: yup
@@ -62,8 +61,7 @@ export const resolvers: ResolverMap = {
         const url = request.protocol + '://' + request.get('host')
         await sendEmail(email, await createConfirmEmailLink(url, user.id, redis))
       }
-
-      const token = sign({ id: user.id }, JWT_SECRET)
+      const token = signUser(user)
       return {
         token,
       }
