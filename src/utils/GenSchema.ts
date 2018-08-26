@@ -10,8 +10,13 @@ export function genSchema() {
   console.log(modulePath)
   const folders = fs.readdirSync(modulePath)
   folders.forEach(folder => {
+    const schemaPath = `${modulePath}/${folder}/schema.graphql`
+    if (!fs.existsSync(schemaPath)) {
+      console.log(`schema path: ${schemaPath} has no graphql definition, skipping`)
+      return
+    }
     const { resolvers } = require(`${modulePath}/${folder}/resolvers`)
-    const typeDefs = importSchema(`${modulePath}/${folder}/schema.graphql`)
+    const typeDefs = importSchema(schemaPath)
     schemas.push(makeExecutableSchema({ resolvers, typeDefs }))
   })
   const schema = mergeSchemas({ schemas })
