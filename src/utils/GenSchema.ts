@@ -12,7 +12,7 @@ export function genSchema() {
   folders.forEach(folder => {
     const schemaPath = `${modulePath}/${folder}/schema.graphql`
     if (!fs.existsSync(schemaPath)) {
-      console.log(`schema path: ${schemaPath} has no graphql definition, skipping`)
+      console.log(`schema path: ${modulePath}/${folder} has no graphql definition, skipping`)
       return
     }
     const { resolvers } = require(`${modulePath}/${folder}/resolvers`)
