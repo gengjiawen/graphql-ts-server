@@ -5,5 +5,5 @@ type Query {
 }
 
 type Mutation {
-  register(email: String!, password: String!): [Error!]
+  register(email: String!, password: String!): Token
 }
