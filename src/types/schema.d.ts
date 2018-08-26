@@ -22,12 +22,19 @@ declare namespace GQL {
 
   interface IQuery {
     __typename: 'Query'
+    login: string | null
     hello: string | null
   }
 
   interface IMutation {
     __typename: 'Mutation'
+    login: IToken | null
     register: IToken | null
+  }
+
+  interface ILoginOnMutationArguments {
+    email: string
+    password: string
   }
 
   interface IRegisterOnMutationArguments {

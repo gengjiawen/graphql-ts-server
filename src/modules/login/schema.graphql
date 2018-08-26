@@ -1,0 +1,10 @@
+# import Token from "../../shared.graphql"
+
+type Query {
+  login: String
+}
+
+type Mutation {
+  login(email: String!, password: String!): Token
+}
+
