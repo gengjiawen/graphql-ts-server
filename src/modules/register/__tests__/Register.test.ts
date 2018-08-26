@@ -1,7 +1,7 @@
-import { request } from 'graphql-request'
 import { User } from '../../../entity/User'
 import { duplicateEmail } from '../ErrorMessages'
 import { createTypeormConn } from '../../../utils/CreateTyepeormConn'
+import { graphQLRequest, mapErrorsMessage } from '../../../jest/GraphQLTestUtil'
 import { Connection } from 'typeorm'
 
 let conn: Connection
@@ -19,14 +19,13 @@ const password = '123456'
 const mutation = (e: string, p: string) => `
 mutation {
   register(email: "${e}", password: "${p}") {
-    path
-    message
+    token
   }
 }`
+
 test('register user', async () => {
-  const url = process.env.TEST_HOST as string
-  const response = await request(url, mutation(email, password))
-  expect(response).toEqual({ register: null })
+  const response: any = await graphQLRequest(mutation(email, password))
+  expect(response.data.data.register.token).not.toBeNull()
   const users = await User.find({ where: { email } })
   expect(users).toHaveLength(1)
   const user = users[0]
@@ -34,18 +33,15 @@ test('register user', async () => {
   expect(user.password).not.toEqual(password)
 
   // test duplicate email
-  const response2: any = await request(url, mutation(email, password))
-  expect(response2.register).toHaveLength(1)
-  expect(response2.register[0]).toEqual({
-    path: 'email',
-    message: duplicateEmail,
-  })
+  const response2 = await graphQLRequest(mutation(email, password))
+  expect(response2.data.data.register).toBeNull()
+  expect(response2.data.errors[0].message).toEqual(duplicateEmail)
 
   // catch bad password
-  const response3: any = await request(url, mutation(email, 'ab'))
-  expect(response3).toMatchSnapshot()
+  const response3 = await graphQLRequest(mutation(email, 'ab'))
+  expect(mapErrorsMessage(response3)).toMatchSnapshot('catch bad password')
 
   // catch bad email and password
-  const response4: any = await request(url, mutation('ab', 'cd'))
-  expect(response4).toMatchSnapshot()
+  const response4 = await graphQLRequest(mutation('ab', 'cd'))
+  expect(mapErrorsMessage(response4)).toMatchSnapshot('catch bad email and password')
 })

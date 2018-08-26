@@ -1,31 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`register user 1`] = `
-Object {
-  "register": Array [
-    Object {
-      "message": "password not long enough",
-      "path": "password",
-    },
-  ],
-}
+exports[`register user: catch bad email and password 1`] = `
+Array [
+  "email not long enough",
+]
 `;
 
-exports[`register user 2`] = `
-Object {
-  "register": Array [
-    Object {
-      "message": "email not long enough",
-      "path": "email",
-    },
-    Object {
-      "message": "email must be a valid email",
-      "path": "email",
-    },
-    Object {
-      "message": "password not long enough",
-      "path": "password",
-    },
-  ],
-}
+exports[`register user: catch bad password 1`] = `
+Array [
+  "password not long enough",
+]
 `;

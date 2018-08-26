@@ -9,6 +9,9 @@ import { ResolverMap } from '../../types/GraphQLUtil'
 import { formatYupError } from '../../utils/FormatYupError'
 import { User } from '../../entity/User'
 import { createConfirmEmailLink, sendEmail } from '../../utils/SendEmail'
+import { sign } from 'jsonwebtoken'
+import { JWT_SECRET } from '../../utils/Consts'
+import { GraphQLError } from 'graphql'
 
 const schema = yup.object().shape({
   email: yup
@@ -33,7 +36,7 @@ export const resolvers: ResolverMap = {
       try {
         await schema.validate(args, { abortEarly: false })
       } catch (e) {
-        return formatYupError(e)
+        throw formatYupError(e)[0]
       }
 
       const { email, password } = args
@@ -44,12 +47,7 @@ export const resolvers: ResolverMap = {
       })
 
       if (userAlreadyExists) {
-        return [
-          {
-            path: 'email',
-            message: duplicateEmail,
-          },
-        ]
+        throw new GraphQLError(duplicateEmail)
       }
 
       const user = User.create({
@@ -65,7 +63,10 @@ export const resolvers: ResolverMap = {
         await sendEmail(email, await createConfirmEmailLink(url, user.id, redis))
       }
 
-      return null
+      const token = sign({ id: user.id }, JWT_SECRET)
+      return {
+        token,
+      }
     },
   },
 }

@@ -11,7 +11,6 @@ declare namespace GQL {
     /** Required for all errors */
     message: string
     locations?: Array<IGraphQLResponseErrorLocation>
-
     /** 7.2.2 says 'GraphQL servers may provide additional entries to error' */
     [propName: string]: any
   }
@@ -28,7 +27,7 @@ declare namespace GQL {
 
   interface IMutation {
     __typename: 'Mutation'
-    register: Array<IError>
+    register: IToken | null
   }
 
   interface IRegisterOnMutationArguments {
@@ -36,10 +35,9 @@ declare namespace GQL {
     password: string
   }
 
-  interface IError {
-    __typename: 'Error'
-    path: string
-    message: string
+  interface IToken {
+    __typename: 'Token'
+    token: string
   }
 }
 
