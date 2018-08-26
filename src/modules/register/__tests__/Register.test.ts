@@ -2,9 +2,15 @@ import { request } from 'graphql-request'
 import { User } from '../../../entity/User'
 import { duplicateEmail } from '../ErrorMessages'
 import { createTypeormConn } from '../../../utils/CreateTyepeormConn'
+import { Connection } from 'typeorm'
 
+let conn: Connection
 beforeAll(async () => {
-  await createTypeormConn()
+  conn = await createTypeormConn()
+})
+
+afterAll(async () => {
+  conn.close()
 })
 
 const email = 'tom@bob.com'
