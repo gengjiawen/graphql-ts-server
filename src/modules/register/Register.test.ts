@@ -1,7 +1,7 @@
-import { User } from '../../../entity/User'
-import { duplicateEmail } from '../ErrorMessages'
-import { createTypeormConn } from '../../../utils/CreateTyepeormConn'
-import { graphQLRequest, mapErrorsMessage } from '../../../jest/GraphQLTestUtil'
+import { User } from '../../entity/User'
+import { duplicateEmail } from './ErrorMessages'
+import { createTypeormConn } from '../../utils/CreateTyepeormConn'
+import { graphQLRequest, mapErrorsMessage } from '../../jest/GraphQLTestUtil'
 import { Connection } from 'typeorm'
 
 let conn: Connection
