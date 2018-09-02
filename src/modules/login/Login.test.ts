@@ -1,16 +1,9 @@
 import { graphQLRequest, mapErrorsMessage } from '../../jest/GraphQLTestUtil'
 import { User } from '../../entity/User'
-import { registerMutation } from '../register/Register.test'
+import { loginMutation, registerMutation } from '../../jest/shared.query'
 
 const email = 'jack_login@test.com'
 const password = '123456'
-
-export const loginMutation = (e: string, p: string) => `
-mutation {
-  login(email: "${e}", password: "${p}") {
-    token
-  }
-}`
 
 test('login successfully', async () => {
   const registerRes: any = await graphQLRequest(registerMutation(email, password))

@@ -5,15 +5,3 @@ Array [
   "invalid login",
 ]
 `;
-
-exports[`register user: catch bad email and password 1`] = `
-Array [
-  "email not long enough",
-]
-`;
-
-exports[`register user: catch bad password 1`] = `
-Array [
-  "password not long enough",
-]
-`;

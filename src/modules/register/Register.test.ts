@@ -3,6 +3,7 @@ import { duplicateEmail } from './ErrorMessages'
 import { createTypeormConn } from '../../utils/CreateTyepeormConn'
 import { graphQLRequest, mapErrorsMessage } from '../../jest/GraphQLTestUtil'
 import { Connection } from 'typeorm'
+import { registerMutation } from '../../jest/shared.query'
 
 let conn: Connection
 beforeAll(async () => {
@@ -15,13 +16,6 @@ afterAll(async () => {
 
 const email = 'jack_register@test.com'
 const password = '123456'
-
-export const registerMutation = (e: string, p: string) => `
-mutation {
-  register(email: "${e}", password: "${p}") {
-    token
-  }
-}`
 
 test('register user', async () => {
   const response: any = await graphQLRequest(registerMutation(email, password))
