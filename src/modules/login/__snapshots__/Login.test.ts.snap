@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login successfully 1`] = `
+Array [
+  "invalid login",
+]
+`;
+
+exports[`register user: catch bad email and password 1`] = `
+Array [
+  "email not long enough",
+]
+`;
+
+exports[`register user: catch bad password 1`] = `
+Array [
+  "password not long enough",
+]
+`;
