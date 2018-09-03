@@ -2,16 +2,10 @@ import { User } from '../../entity/User'
 import { duplicateEmail } from './ErrorMessages'
 import { createTypeormConn } from '../../utils/CreateTyepeormConn'
 import { graphQLRequest, mapErrorsMessage } from '../../jest/GraphQLTestUtil'
-import { Connection } from 'typeorm'
 import { registerMutation } from '../../jest/shared.query'
 
-let conn: Connection
 beforeAll(async () => {
-  conn = await createTypeormConn()
-})
-
-afterAll(async () => {
-  conn.close()
+  await createTypeormConn()
 })
 
 const email = 'jack_register@test.com'

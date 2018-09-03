@@ -1,19 +1,13 @@
 import { graphQLRequest, mapErrorsMessage } from '../../jest/GraphQLTestUtil'
 import { User } from '../../entity/User'
 import { loginMutation, registerMutation } from '../../jest/shared.query'
-import { Connection } from 'typeorm'
 import { createTypeormConn } from '../../utils/CreateTyepeormConn'
 
 const email = 'jack_login@test.com'
 const password = '123456'
 
-let conn: Connection
 beforeAll(async () => {
-  conn = await createTypeormConn()
-})
-
-afterAll(async () => {
-  conn.close()
+  await createTypeormConn()
 })
 
 test('login successfully', async () => {

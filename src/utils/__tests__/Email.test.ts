@@ -1,25 +1,19 @@
 import * as Redis from 'ioredis'
 import axios from 'axios'
-import { Connection } from 'typeorm'
 import { createTypeormConn } from '../CreateTyepeormConn'
 import { User } from '../../entity/User'
 import { createConfirmEmailLink } from '../SendEmail'
 
 let userId: string = ''
-let conn: Connection
 const redis = new Redis()
 
 beforeAll(async () => {
-  conn = await createTypeormConn()
+  await createTypeormConn()
   const user = await User.create({
     email: 'parker@gmail.com',
     password: 'remembering_me',
   }).save()
   userId = user.id
-})
-
-afterAll(async () => {
-  await conn.close()
 })
 
 test('make sure it confirms user and clear key in redis', async () => {
