@@ -18,8 +18,7 @@ jobs:
           sudo npm i -g n
           sudo n latest
           sudo npm i -g yarn
-          source ~/.bashrc
-          nvm use system
+          rm -rf ~/.nvm
           npx envinfo
           yarn install
     - save_cache:
@@ -29,12 +28,10 @@ jobs:
     - run:
         name: build
         command: |
-          source ~/.bashrc
           yarn build
     - run: docker-compose up -d
     - run:
         name: test
         command: |
-          source ~/.bashrc
           npx envinfo
           yarn test
