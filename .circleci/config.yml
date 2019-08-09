@@ -29,10 +29,12 @@ jobs:
     - run:
         name: build
         command: |
+          source ~/.bashrc
           yarn build
     - run: docker-compose up -d
     - run:
         name: test
         command: |
+          source ~/.bashrc
           npx envinfo
           yarn test
