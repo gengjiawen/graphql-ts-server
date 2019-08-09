@@ -12,13 +12,13 @@ jobs:
     - run:
         name: setup Node.js
         command: |
+          rm -rf ~/.nvm
           sudo apt-get update
           curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
           sudo apt-get install nodejs -y
           sudo npm i -g n
           sudo n latest
           sudo npm i -g yarn
-          rm -rf ~/.nvm
           npx envinfo
           yarn install
     - save_cache:
