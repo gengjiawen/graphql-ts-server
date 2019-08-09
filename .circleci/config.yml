@@ -12,8 +12,7 @@ jobs:
     - run:
         name: setup nodejs
         command: |
-          source ~/.bashrc
-          npm i -g n
+          sudo npm i -g n
           sudo n latest
           npx envinfo
           npm i -g yarn
