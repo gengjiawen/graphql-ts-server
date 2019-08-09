@@ -12,8 +12,8 @@ jobs:
     - run:
         name: setup nodejs
         command: |
-          source ~/.bashrc
-          nvm install node
+          npm i -g n
+          n latest
           npx envinfo
           npm i -g yarn
           yarn install
