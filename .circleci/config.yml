@@ -12,6 +12,7 @@ jobs:
     - run:
         name: setup nodejs
         command: |
+          source ~/.bashrc
           npm i -g n
           sudo n latest
           npx envinfo
@@ -30,5 +31,4 @@ jobs:
     - run:
         name: test
         command: |
-          source ~/.bashrc
           yarn test
