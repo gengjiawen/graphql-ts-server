@@ -12,6 +12,7 @@ jobs:
     - run:
         name: setup nodejs
         command: |
+          sudo apt install npm -y
           sudo npm i -g n
           sudo n latest
           npx envinfo
