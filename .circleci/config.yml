@@ -13,7 +13,7 @@ jobs:
         name: setup nodejs
         command: |
           npm i -g n
-          n latest
+          sudo n latest
           npx envinfo
           npm i -g yarn
           yarn install
