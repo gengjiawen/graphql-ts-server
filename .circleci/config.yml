@@ -10,9 +10,9 @@ jobs:
         - v1-dependencies-{{ checksum "package.json" }}
         - v1-dependencies-
     - run:
-        name: setup nodejs
+        name: setup Node.js
         command: |
-          sudo apt-get update && sudo apt-get npm
+          sudo apt-get update && sudo apt-get install npm
           sudo npm i -g n@next
           sudo n latest --insecure
           sudo npm i -g yarn
