@@ -19,7 +19,7 @@
     "graphql-import": "0.6.0",
     "ioredis": "3.2.2",
     "koa-jwt": "3.5.0",
-    "nodemailer": "4.6.7",
+    "nodemailer": "6.3.0",
     "pg": "7.4.3",
     "reflect-metadata": "0.1.12",
     "typeorm": "0.2.18",
