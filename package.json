@@ -22,7 +22,7 @@
     "nodemailer": "4.6.7",
     "pg": "7.4.3",
     "reflect-metadata": "0.1.12",
-    "typeorm": "0.2.7",
+    "typeorm": "0.2.18",
     "uuid": "^3.3.2",
     "yup": "0.26.2"
   },
