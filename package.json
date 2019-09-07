@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@gql2ts/from-schema": "1.8.2",
-    "apollo-server": "2.0.5",
+    "apollo-server": "2.9.3",
     "apollo-server-koa": "2.0.4",
     "bcryptjs": "2.4.3",
     "cross-env": "5.2.0",
