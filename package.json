@@ -36,7 +36,7 @@
     "@types/koa-router": "7.0.42",
     "@types/jsonwebtoken": "^7.2.8",
     "@koa/cors": "2.2.2",
-    "@types/node": "12.7.4",
+    "@types/node": "12.7.5",
     "@types/nodemailer": "6.2.1",
     "@types/uuid": "3.4.3",
     "@types/yup": "0.24.7",
