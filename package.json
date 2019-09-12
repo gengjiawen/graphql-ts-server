@@ -9,7 +9,7 @@
     "gen-schema-types": "ts-node scripts/createTypes.ts"
   },
   "dependencies": {
-    "@gql2ts/from-schema": "1.8.2",
+    "@gql2ts/from-schema": "1.10.1",
     "apollo-server": "2.9.3",
     "apollo-server-koa": "2.9.3",
     "bcryptjs": "2.4.3",
