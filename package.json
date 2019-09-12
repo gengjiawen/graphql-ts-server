@@ -23,7 +23,7 @@
     "pg": "7.12.1",
     "reflect-metadata": "0.1.13",
     "typeorm": "0.2.18",
-    "uuid": "^3.3.2",
+    "uuid": "^3.3.3",
     "yup": "0.26.2"
   },
   "devDependencies": {
