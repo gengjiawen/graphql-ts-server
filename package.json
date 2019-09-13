@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "graphql-ts-server",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon --exec ts-node src/index.ts",
+    "start": "ts-node-dev --respawn src/index.ts",
     "build": "rimraf dist && cross-env NODE_ENV=development tsc",
     "test": "cross-env NODE_ENV=test jest --forceExit",
     "gen-schema-types": "ts-node scripts/createTypes.ts"
@@ -42,13 +42,9 @@
     "axios": "0.19.0",
     "gql2ts": "1.8.2",
     "jest": "23.5.0",
-    "nodemon": "1.18.3",
     "prettier": "1.18.2",
     "rimraf": "^2.6.2",
     "ts-jest": "23.10.5",
-    "ts-node": "6.0.2",
-    "tslint": "5.19.0",
-    "tslint-config-prettier": "1.14.0",
     "typescript": "3.6.3"
   },
   "jest": {
