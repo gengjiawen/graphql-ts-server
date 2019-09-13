@@ -22,14 +22,18 @@ test('register user', async () => {
 
   // test duplicate email
   const response2 = await graphQLRequest(registerMutation(email, password))
-  expect(response2.data.data.register).toBeNull()
+  expect(response2.data.data).toBeNull()
   expect(response2.data.errors[0].message).toEqual(duplicateEmail)
 
   // catch bad password
   const response3 = await graphQLRequest(registerMutation(email, 'ab'))
-  expect(mapErrorsMessage(response3)).toMatchSnapshot('catch bad password')
+  expect(
+    mapErrorsMessage(response3)[0].validationErrors.map((i: any) => i.constraints)
+  ).toMatchSnapshot('catch bad password')
 
   // catch bad email and password
   const response4 = await graphQLRequest(registerMutation('ab', 'cd'))
-  expect(mapErrorsMessage(response4)).toMatchSnapshot('catch bad email and password')
+  expect(
+    mapErrorsMessage(response4)[0].validationErrors.map((i: any) => i.constraints)
+  ).toMatchSnapshot('catch bad email and password')
 })

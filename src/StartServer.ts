@@ -1,15 +1,16 @@
 import * as Koa from 'koa'
 import * as Router from 'koa-router'
 import * as cors from '@koa/cors'
+import 'reflect-metadata'
 import { createTypeormConn } from './utils/CreateTyepeormConn'
-import { genSchema } from './utils/GenSchema'
+import { createSchema } from './utils/SchemaUtil'
 import { redis } from './RedisInstance'
 import { confirmEmail } from './routes/ConfirmEmail'
 import { Context } from 'koa'
 import { ApolloServer } from 'apollo-server-koa'
 
 export const startServer = async () => {
-  const schema = genSchema()
+  const schema = await createSchema()
 
   const apolloServer = new ApolloServer({
     schema: schema,
@@ -24,6 +25,7 @@ export const startServer = async () => {
 
   const router = new Router()
 
+  // @ts-ignore
   router.get('/confirm/:id', confirmEmail)
 
   await createTypeormConn()
