@@ -23,6 +23,6 @@ test('login successfully', async () => {
 
 test('login with wrong password', async () => {
   const loginWrongPassRes: any = await graphQLRequest(loginMutation(email, '123'))
-  expect(loginWrongPassRes.data.data.login).toBeNull()
+  expect(loginWrongPassRes.data.data).toBeNull()
   expect(mapErrorsMessage(loginWrongPassRes)).toMatchSnapshot()
 })

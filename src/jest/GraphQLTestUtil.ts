@@ -7,5 +7,5 @@ export function graphQLRequest(payload: string) {
 
 export function mapErrorsMessage(response: AxiosResponse) {
   const errors: any[] = response.data.errors
-  return errors.map(i => i.message)
+  return errors.map(i => i.extensions.exception)
 }
