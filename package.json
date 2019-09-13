@@ -8,6 +8,7 @@
     "test": "cross-env NODE_ENV=test TS_NODE_FILES=true jest --forceExit"
   },
   "dependencies": {
+    "@koa/cors": "2.2.2",
     "apollo-server": "2.9.3",
     "apollo-server-koa": "2.9.3",
     "bcryptjs": "2.4.3",
@@ -25,7 +26,6 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@koa/cors": "2.2.2",
     "@types/bcryptjs": "2.4.1",
     "@types/ioredis": "3.2.14",
     "@types/jest": "23.3.1",
