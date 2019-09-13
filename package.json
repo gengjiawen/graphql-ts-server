@@ -15,7 +15,7 @@
     "bcryptjs": "2.4.3",
     "cross-env": "5.2.0",
     "fs-extra": "7.0.0",
-    "graphql": "0.13.2",
+    "graphql": "14.5.4",
     "graphql-import": "0.6.0",
     "ioredis": "3.2.2",
     "koa-jwt": "3.5.0",
