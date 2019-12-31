@@ -41,7 +41,7 @@
     "rimraf": "^3.0.0",
     "ts-jest": "24.1.0",
     "ts-node-dev": "1.0.0-pre.44",
-    "typescript": "3.7.3"
+    "typescript": "3.7.4"
   },
   "jest": {
     "testEnvironment": "node",
