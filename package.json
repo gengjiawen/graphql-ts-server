@@ -20,7 +20,7 @@
     "nodemailer": "6.3.0",
     "pg": "7.17.0",
     "reflect-metadata": "0.1.13",
-    "type-graphql": "^0.17.5",
+    "type-graphql": "^0.17.6",
     "typeorm": "0.2.22",
     "uuid": "^3.3.3"
   },
