@@ -35,7 +35,7 @@
     "@types/node": "13.1.1",
     "@types/nodemailer": "6.2.1",
     "@types/uuid": "3.4.6",
-    "axios": "0.19.0",
+    "axios": "0.19.2",
     "jest": "24.9",
     "prettier": "1.19.1",
     "rimraf": "^3.0.0",
