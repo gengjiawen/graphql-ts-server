@@ -28,12 +28,13 @@ test('register user', async () => {
   // catch bad password
   const response3 = await graphQLRequest(registerMutation(email, 'ab'))
   expect(
-    mapErrorsMessage(response3)[0].validationErrors.map((i: any) => i.constraints)
+    ((mapErrorsMessage(response3))[0]).validationErrors.map((i: any) => i.constraints)
   ).toMatchSnapshot('catch bad password')
 
   // catch bad email and password
   const response4 = await graphQLRequest(registerMutation('ab', 'cd'))
+  const errorsMessage = mapErrorsMessage(response4)
   expect(
-    mapErrorsMessage(response4)[0].validationErrors.map((i: any) => i.constraints)
-  ).toMatchSnapshot('catch bad email and password')
+    errorsMessage[0].validationErrors.map((i: any) => i.constraints)
+).toMatchSnapshot('catch bad email and password')
 })
