@@ -36,10 +36,9 @@
     "@types/nodemailer": "6.2.1",
     "@types/uuid": "3.4.6",
     "axios": "0.19.2",
-    "jest": "24.9",
     "prettier": "1.19.1",
     "rimraf": "^3.0.0",
-    "ts-jest": "24.1.0",
+    "ts-jest": "25.4.0",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.8.3"
   },
