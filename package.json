@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development ts-node-dev --respawn src/index.ts",
     "build": "rimraf dist && cross-env NODE_ENV=development tsc",
-    "test": "cross-env NODE_ENV=test TS_NODE_FILES=true jest --forceExit"
+    "test": "cross-env NODE_ENV=test jest --forceExit"
   },
   "dependencies": {
     "@koa/cors": "3.0.0",
@@ -27,7 +27,6 @@
   "devDependencies": {
     "@types/bcryptjs": "2.4.2",
     "@types/ioredis": "4.0.18",
-    "@types/jest": "24.0.19",
     "@types/jsonwebtoken": "8.3.4",
     "@types/kcors": "2.2.3",
     "@types/koa": "2.0.50",
@@ -38,6 +37,7 @@
     "axios": "0.19.2",
     "prettier": "1.19.1",
     "rimraf": "^3.0.0",
+    "jest": "25.4.0",
     "ts-jest": "25.4.0",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.8.3"
