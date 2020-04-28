@@ -20,7 +20,7 @@
     "pg": "8.0.3",
     "reflect-metadata": "0.1.13",
     "type-graphql": "^0.17.6",
-    "typeorm": "0.2.22",
+    "typeorm": "0.2.24",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
