@@ -21,6 +21,7 @@ export const startServer = async () => {
   })
 
   const app = new Koa()
+  app.use(require('koa-compress')())
   apolloServer.applyMiddleware({ app, path: '/' })
 
   const router = new Router()
