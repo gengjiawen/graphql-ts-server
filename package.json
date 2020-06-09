@@ -11,7 +11,7 @@
     "@koa/cors": "3.0.0",
     "apollo-server-koa": "2.14.2",
     "bcryptjs": "2.4.3",
-    "class-validator": "0.12.1",
+    "class-validator": "0.12.2",
     "cross-env": "7.0.2",
     "graphql": "15.1.0",
     "ioredis": "4.17.3",
