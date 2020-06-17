@@ -16,7 +16,7 @@
     "graphql": "15.1.0",
     "ioredis": "4.17.3",
     "koa-compress": "^4.0.1",
-    "koa-jwt": "3.6.0",
+    "koa-jwt": "4.0.0",
     "nodemailer": "6.4.8",
     "pg": "8.2.1",
     "reflect-metadata": "0.1.13",
