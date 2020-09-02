@@ -27,7 +27,7 @@
   "devDependencies": {
     "@types/bcryptjs": "2.4.2",
     "@types/ioredis": "4.0.18",
-    "@types/jest": "26.0.3",
+    "@types/jest": "26.0.13",
     "@types/jsonwebtoken": "8.5.0",
     "@types/kcors": "2.2.3",
     "@types/koa-router": "7.4.1",
