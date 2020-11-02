@@ -19,7 +19,7 @@ jobs:
           sudo apt-get install nodejs -y
           sudo npm i -g n
           sudo n latest
-          sudo npm i -g yarn
+          sudo npm i -g yarn npm
           npx envinfo
           yarn install
     - save_cache:
