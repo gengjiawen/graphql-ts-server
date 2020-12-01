@@ -14,7 +14,7 @@
     "bcryptjs": "2.4.3",
     "class-validator": "0.12.2",
     "cross-env": "7.0.2",
-    "graphql": "15.3.0",
+    "graphql": "15.4.0",
     "ioredis": "4.17.3",
     "koa-compress": "^5.0.1",
     "koa-jwt": "4.0.0",
