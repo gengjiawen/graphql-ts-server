@@ -5,5 +5,4 @@ build/
 dist/
 .DS_Store
 *.log
-yarn.lock
 package-lock.json
