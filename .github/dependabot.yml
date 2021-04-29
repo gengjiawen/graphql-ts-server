@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "21:00"
+    timezone: Asia/Shanghai
+  open-pull-requests-limit: 10
+  reviewers:
+  - gengjiawen
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.17
+    - 14.14.22
+    - 14.14.31
+  - dependency-name: apollo-server-koa
+    versions:
+    - 2.19.1
+    - 2.19.2
+  - dependency-name: typescript
+    versions:
+    - 4.1.3
+  - dependency-name: nodemailer
+    versions:
+    - 6.4.17
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.19
