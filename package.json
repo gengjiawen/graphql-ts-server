@@ -13,7 +13,7 @@
     "apollo-server-koa": "2.25.0",
     "bcryptjs": "2.4.3",
     "class-validator": "0.12.2",
-    "cross-env": "7.0.2",
+    "cross-env": "7.0.3",
     "graphql": "15.4.0",
     "ioredis": "4.17.3",
     "koa-compress": "^5.0.1",
