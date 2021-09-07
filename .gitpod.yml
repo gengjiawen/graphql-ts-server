@@ -3,4 +3,11 @@ image:
 
 tasks:
   - init: docker-compose up
-  - init: yarn
+  - init: npm i -g npm-check-updates
+  - init: yarn && fish
+
+vscode:
+  extensions:
+    - gengjiawen.vscode-npm-dependency
+    - gengjiawen.vscode-postfix-ts
+    - gengjiawen.npm-dependency-links
