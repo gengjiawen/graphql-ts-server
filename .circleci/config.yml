@@ -2,7 +2,8 @@ version: 2.1
 
 jobs:
   build:
-    machine: true
+    machine:
+      image: ubuntu-2004:202010-01
     working_directory: ~/repo
     steps:
     - checkout
@@ -13,13 +14,6 @@ jobs:
     - run:
         name: setup Node.js
         command: |
-          rm -rf /opt/circleci/.nvm/
-          sudo apt-get update
-          curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-          sudo apt-get install nodejs -y
-          sudo npm i -g n
-          sudo n latest
-          sudo npm i -g yarn npm
           npx envinfo
           yarn install
     - save_cache:
