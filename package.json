@@ -16,7 +16,7 @@
     "cross-env": "7.0.2",
     "graphql": "15.5.1",
     "ioredis": "4.17.3",
-    "koa-compress": "^5.0.1",
+    "koa-compress": "^5.1.0",
     "koa-jwt": "4.0.0",
     "nodemailer": "6.6.1",
     "pg": "8.7.3",
