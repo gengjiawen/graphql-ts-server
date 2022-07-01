@@ -846,10 +846,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/kcors@2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@types/kcors/-/kcors-2.2.3.tgz#e6532132492173a8681dd85774f380834b96f571"
-  integrity sha512-ICwth6ZODezC22Yvkk5fMIESkAHhbjoqNn+yIBPJPKfG2sP9+fPmMWGBUrI3h1wjTBmbrQ1fBE6qoUMmG7yo9w==
+"@types/kcors@2.2.6":
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/@types/kcors/-/kcors-2.2.6.tgz#24a531f4b36329a80d6e4299aac655c363a95af0"
+  integrity sha512-y5gCt/795EWTR5AZrgbG2rez6l5aYF3RNIHrsLMl6U9LbzUUWcDOApAxu0pMCORTNdJr+jOrEW3NlZ++jnO0sQ==
   dependencies:
     "@types/koa" "*"
 

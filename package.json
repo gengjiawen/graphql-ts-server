@@ -30,7 +30,7 @@
     "@types/ioredis": "4.17.3",
     "@types/jest": "26.0.13",
     "@types/jsonwebtoken": "8.5.0",
-    "@types/kcors": "2.2.3",
+    "@types/kcors": "2.2.6",
     "@types/koa__router": "^8.0.3",
     "@types/node": "15.6.1",
     "@types/nodemailer": "6.4.0",
