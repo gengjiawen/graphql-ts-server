@@ -6,7 +6,7 @@ Array [
     "isEmail": "email must be an email",
   },
   Object {
-    "length": "password must be longer than or equal to 3 characters",
+    "isLength": "password must be longer than or equal to 3 characters",
   },
 ]
 `;
@@ -14,7 +14,7 @@ Array [
 exports[`register user: catch bad password 1`] = `
 Array [
   Object {
-    "length": "password must be longer than or equal to 3 characters",
+    "isLength": "password must be longer than or equal to 3 characters",
   },
 ]
 `;

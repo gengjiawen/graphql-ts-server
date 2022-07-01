@@ -1,4 +1,4 @@
-import * as Redis from 'ioredis'
+import Redis from 'ioredis'
 import axios from 'axios'
 import { createTypeormConn } from '../CreateTyepeormConn'
 import { User } from '../../entity/User'
