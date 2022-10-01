@@ -32,7 +32,7 @@
     "@types/jsonwebtoken": "8.5.8",
     "@types/kcors": "2.2.6",
     "@types/koa__router": "^8.0.11",
-    "@types/node": "18.7.6",
+    "@types/node": "18.7.23",
     "@types/nodemailer": "6.4.4",
     "@types/uuid": "8.3.4",
     "axios": "0.27.2",
