@@ -5,7 +5,6 @@ tasks:
   - init: docker-compose build
     command: docker-compose up
   - init: npm i -g npm-check-updates
-  - init: yarn && fish
 
 vscode:
   extensions:
