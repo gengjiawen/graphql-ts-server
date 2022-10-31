@@ -15,7 +15,8 @@ jobs:
         name: setup Node.js
         command: |
           npx envinfo
-          yarn install
+          npm i -g pnpm
+          pnpm i
     - save_cache:
         paths:
         - node_modules
