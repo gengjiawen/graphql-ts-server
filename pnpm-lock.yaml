@@ -10,7 +10,7 @@ specifiers:
   '@types/koa__cors': ^3.3.0
   '@types/koa__router': ^12.0.0
   '@types/node': 18.7.6
-  '@types/nodemailer': 6.4.4
+  '@types/nodemailer': 6.4.6
   apollo-server-koa: 3.10.4
   axios: 0.27.2
   bcryptjs: 2.4.3
@@ -22,7 +22,7 @@ specifiers:
   koa: ^2.13.4
   koa-compress: ^5.1.0
   koa-jwt: 4.0.3
-  nodemailer: 6.7.6
+  nodemailer: 6.8.0
   nodemon: ^2.0.20
   pg: 8.8.0
   prettier: 2.7.1
@@ -46,7 +46,7 @@ dependencies:
   koa: 2.13.4
   koa-compress: 5.1.0
   koa-jwt: 4.0.3
-  nodemailer: 6.7.6
+  nodemailer: 6.8.0
   pg: 8.8.0
   reflect-metadata: 0.1.13
   type-graphql: 1.1.1_v2revtygxcm7xrdg2oz3ssohfu
@@ -60,7 +60,7 @@ devDependencies:
   '@types/koa__cors': 3.3.0
   '@types/koa__router': 12.0.0
   '@types/node': 18.7.6
-  '@types/nodemailer': 6.4.4
+  '@types/nodemailer': 6.4.6
   axios: 0.27.2
   jest: 28.1.2_ijo5v5nyfq45vs5zs6kgijtkzy
   nodemon: 2.0.20
@@ -1148,8 +1148,8 @@ packages:
   /@types/node/18.7.6:
     resolution: {integrity: sha512-EdxgKRXgYsNITy5mjjXjVE/CS8YENSdhiagGrLqjG0pvA2owgJ6i4l7wy/PFZGC0B1/H20lWKN7ONVDNYDZm7A==}
 
-  /@types/nodemailer/6.4.4:
-    resolution: {integrity: sha512-Ksw4t7iliXeYGvIQcSIgWQ5BLuC/mljIEbjf615svhZL10PE9t+ei8O9gDaD3FPCasUJn9KTLwz2JFJyiiyuqw==}
+  /@types/nodemailer/6.4.6:
+    resolution: {integrity: sha512-pD6fL5GQtUKvD2WnPmg5bC2e8kWCAPDwMPmHe/ohQbW+Dy0EcHgZ2oCSuPlWNqk74LS5BVMig1SymQbFMPPK3w==}
     dependencies:
       '@types/node': 18.7.6
     dev: true
@@ -3127,8 +3127,8 @@ packages:
     resolution: {integrity: sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==}
     dev: true
 
-  /nodemailer/6.7.6:
-    resolution: {integrity: sha512-/6KF/umU7r7X21Y648/yiRLrgkfz0dmpyuo4BfgYWIpnT/jCbkPTvegMfxCsDAu+O810p2L1BGXieMTPp3nJVA==}
+  /nodemailer/6.8.0:
+    resolution: {integrity: sha512-EjYvSmHzekz6VNkNd12aUqAco+bOkRe3Of5jVhltqKhEsjw/y0PYPJfp83+s9Wzh1dspYAkUW/YNQ350NATbSQ==}
     engines: {node: '>=6.0.0'}
     dev: false
 
