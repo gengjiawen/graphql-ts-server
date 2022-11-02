@@ -16,7 +16,7 @@ jobs:
         command: |
           npx envinfo
           npm i -g pnpm
-          pnpm i
+          pnpm i --no-frozen-lockfile
     - save_cache:
         paths:
         - node_modules
