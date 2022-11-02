@@ -1,6 +1,6 @@
 import * as nodemailer from 'nodemailer'
 import { Redis } from 'ioredis'
-import { v4 } from 'uuid'
+import { randomUUID } from 'crypto';
 
 export const sendEmail = async (recipient: string, url: string) => {
   const transporter = nodemailer.createTransport({
@@ -36,7 +36,7 @@ export const sendEmail = async (recipient: string, url: string) => {
 }
 
 export const createConfirmEmailLink = async (url: string, userId: string, redis: Redis) => {
-  const id = v4()
+  const id = randomUUID()
   await redis.set(id, userId, 'EX', 24 * 60 * 60)
   return `${url}/confirm/${id}`
 }
