@@ -15,7 +15,7 @@
     "class-validator": "0.13.2",
     "cross-env": "7.0.3",
     "graphql": "15.8.0",
-    "ioredis": "5.2.3",
+    "ioredis": "5.2.4",
     "koa": "^2.13.4",
     "koa-compress": "^5.1.0",
     "koa-jwt": "4.0.3",

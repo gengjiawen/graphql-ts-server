@@ -17,7 +17,7 @@ specifiers:
   class-validator: 0.13.2
   cross-env: 7.0.3
   graphql: 15.8.0
-  ioredis: 5.2.3
+  ioredis: 5.2.4
   jest: 28.1.2
   koa: ^2.13.4
   koa-compress: ^5.1.0
@@ -42,7 +42,7 @@ dependencies:
   class-validator: 0.13.2
   cross-env: 7.0.3
   graphql: 15.8.0
-  ioredis: 5.2.3
+  ioredis: 5.2.4
   koa: 2.13.4
   koa-compress: 5.1.0
   koa-jwt: 4.0.3
@@ -50,7 +50,7 @@ dependencies:
   pg: 8.8.0
   reflect-metadata: 0.1.13
   type-graphql: 1.1.1_v2revtygxcm7xrdg2oz3ssohfu
-  typeorm: 0.3.10_4w5mhs42mczrpraitmsqjnkaiy
+  typeorm: 0.3.10_zfbzyadn2rnu3hf3pysto5crhm
 
 devDependencies:
   '@types/bcryptjs': 2.4.2
@@ -2281,8 +2281,8 @@ packages:
   /inherits/2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  /ioredis/5.2.3:
-    resolution: {integrity: sha512-gQNcMF23/NpvjCaa1b5YycUyQJ9rBNH2xP94LWinNpodMWVUPP5Ai/xXANn/SM7gfIvI62B5CCvZxhg5pOgyMw==}
+  /ioredis/5.2.4:
+    resolution: {integrity: sha512-qIpuAEt32lZJQ0XyrloCRdlEdUUNGG9i0UOk6zgzK6igyudNWqEBxfH6OlbnOOoBBvr1WB02mm8fR55CnikRng==}
     engines: {node: '>=12.22.0'}
     dependencies:
       '@ioredis/commands': 1.2.0
@@ -3990,7 +3990,7 @@ packages:
       mime-types: 2.1.35
     dev: false
 
-  /typeorm/0.3.10_4w5mhs42mczrpraitmsqjnkaiy:
+  /typeorm/0.3.10_zfbzyadn2rnu3hf3pysto5crhm:
     resolution: {integrity: sha512-VMKiM84EpJQ+Mz9xDIPqnfplWhyUy1d8ccaKdMY9obifxJOTFnv8GYVyPsGwG8Lk7Nb8MlttHyHWENGAhBA3WA==}
     engines: {node: '>= 12.9.0'}
     hasBin: true
@@ -4057,7 +4057,7 @@ packages:
       debug: 4.3.4
       dotenv: 16.0.3
       glob: 7.2.3
-      ioredis: 5.2.3
+      ioredis: 5.2.4
       js-yaml: 4.1.0
       mkdirp: 1.0.4
       pg: 8.8.0
