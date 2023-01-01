@@ -25,7 +25,7 @@ specifiers:
   nodemailer: 6.8.0
   nodemon: ^2.0.20
   pg: 8.8.0
-  prettier: 2.7.1
+  prettier: 2.8.1
   reflect-metadata: 0.1.13
   rimraf: ^3.0.2
   ts-jest: 28.0.8
@@ -64,7 +64,7 @@ devDependencies:
   axios: 0.27.2
   jest: 28.1.2_ijo5v5nyfq45vs5zs6kgijtkzy
   nodemon: 2.0.20
-  prettier: 2.7.1
+  prettier: 2.8.1
   rimraf: 3.0.2
   ts-jest: 28.0.8_bilcnjbzqxjas6i363fl2r3xmq
   ts-node: 10.9.1_62wwqupym3vtw4mnbkwur73zyu
@@ -3495,8 +3495,8 @@ packages:
       xtend: 4.0.2
     dev: false
 
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
