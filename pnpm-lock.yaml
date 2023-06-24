@@ -4,7 +4,7 @@ specifiers:
   '@koa/cors': 4.0.0
   '@koa/router': ^10.1.1
   '@types/bcryptjs': 2.4.2
-  '@types/jest': 29.2.1
+  '@types/jest': 29.2.3
   '@types/jsonwebtoken': 8.5.8
   '@types/koa': ^2.13.5
   '@types/koa__cors': ^3.3.0
@@ -54,7 +54,7 @@ dependencies:
 
 devDependencies:
   '@types/bcryptjs': 2.4.2
-  '@types/jest': 29.2.1
+  '@types/jest': 29.2.3
   '@types/jsonwebtoken': 8.5.8
   '@types/koa': 2.13.5
   '@types/koa__cors': 3.3.0
@@ -1106,8 +1106,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/29.2.1:
-    resolution: {integrity: sha512-nKixEdnGDqFOZkMTF74avFNr3yRqB1ZJ6sRZv5/28D5x2oLN14KApv7F9mfDT/vUic0L3tRCsh3XWpWjtJisUQ==}
+  /@types/jest/29.2.3:
+    resolution: {integrity: sha512-6XwoEbmatfyoCjWRX7z0fKMmgYKe9+/HrviJ5k0X/tjJWHGAezZOfYaxqQKuzG/TvQyr+ktjm4jgbk0s4/oF2w==}
     dependencies:
       expect: 29.2.2
       pretty-format: 29.2.1
