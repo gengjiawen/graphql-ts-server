@@ -11,7 +11,7 @@ specifiers:
   '@types/koa__router': ^12.0.0
   '@types/node': 18.7.6
   '@types/nodemailer': 6.4.4
-  apollo-server-koa: 3.10.4
+  apollo-server-koa: 3.11.1
   axios: 0.27.2
   bcryptjs: 2.4.3
   class-validator: 0.13.2
@@ -37,7 +37,7 @@ specifiers:
 dependencies:
   '@koa/cors': 4.0.0
   '@koa/router': 10.1.1
-  apollo-server-koa: 3.10.4_graphql@15.8.0+koa@2.13.4
+  apollo-server-koa: 3.11.1_graphql@15.8.0+koa@2.13.4
   bcryptjs: 2.4.3
   class-validator: 0.13.2
   cross-env: 7.0.3
@@ -1287,6 +1287,7 @@ packages:
   /apollo-datasource/3.3.2:
     resolution: {integrity: sha512-L5TiS8E2Hn/Yz7SSnWIVbZw0ZfEIXZCa5VUiVxD9P53JvSrf4aStvsFDlGWPvpIdCR+aly2CfoB79B9/JjKFqg==}
     engines: {node: '>=12.0'}
+    deprecated: The `apollo-datasource` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     dependencies:
       '@apollo/utils.keyvaluecache': 1.0.1
       apollo-server-env: 4.2.1
@@ -1296,13 +1297,15 @@ packages:
 
   /apollo-reporting-protobuf/3.3.3:
     resolution: {integrity: sha512-L3+DdClhLMaRZWVmMbBcwl4Ic77CnEBPXLW53F7hkYhkaZD88ivbCVB1w/x5gunO6ZHrdzhjq0FHmTsBvPo7aQ==}
+    deprecated: The `apollo-reporting-protobuf` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/usage-reporting-protobuf` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     dependencies:
       '@apollo/protobufjs': 1.2.6
     dev: false
 
-  /apollo-server-core/3.10.4_graphql@15.8.0:
-    resolution: {integrity: sha512-eh5AH4b8savvw/9Fd0uH8WIV5EydIS55y5v3Xuu7Ztfdjjd0w1vuc7+4iV+C0w6/KyKQkOnFZCP/sWk2CQCNIQ==}
+  /apollo-server-core/3.11.1_graphql@15.8.0:
+    resolution: {integrity: sha512-t/eCKrRFK1lYZlc5pHD99iG7Np7CEm3SmbDiONA7fckR3EaB/pdsEdIkIwQ5QBBpT5JLp/nwvrZRVwhaWmaRvw==}
     engines: {node: '>=12.0'}
+    deprecated: The `apollo-server-core` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/server` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     peerDependencies:
       graphql: ^15.3.0 || ^16.0.0
     dependencies:
@@ -1318,8 +1321,8 @@ packages:
       apollo-reporting-protobuf: 3.3.3
       apollo-server-env: 4.2.1
       apollo-server-errors: 3.3.1_graphql@15.8.0
-      apollo-server-plugin-base: 3.6.3_graphql@15.8.0
-      apollo-server-types: 3.6.3_graphql@15.8.0
+      apollo-server-plugin-base: 3.7.1_graphql@15.8.0
+      apollo-server-types: 3.7.1_graphql@15.8.0
       async-retry: 1.3.3
       fast-json-stable-stringify: 2.1.0
       graphql: 15.8.0
@@ -1337,6 +1340,7 @@ packages:
   /apollo-server-env/4.2.1:
     resolution: {integrity: sha512-vm/7c7ld+zFMxibzqZ7SSa5tBENc4B0uye9LTfjJwGoQFY5xsUPH5FpO5j0bMUDZ8YYNbrF9SNtzc5Cngcr90g==}
     engines: {node: '>=12.0'}
+    deprecated: The `apollo-server-env` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/utils.fetcher` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     dependencies:
       node-fetch: 2.6.7
     transitivePeerDependencies:
@@ -1346,15 +1350,17 @@ packages:
   /apollo-server-errors/3.3.1_graphql@15.8.0:
     resolution: {integrity: sha512-xnZJ5QWs6FixHICXHxUfm+ZWqqxrNuPlQ+kj5m6RtEgIpekOPssH/SD9gf2B4HuWV0QozorrygwZnux8POvyPA==}
     engines: {node: '>=12.0'}
+    deprecated: The `apollo-server-errors` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/server` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     peerDependencies:
       graphql: ^15.3.0 || ^16.0.0
     dependencies:
       graphql: 15.8.0
     dev: false
 
-  /apollo-server-koa/3.10.4_graphql@15.8.0+koa@2.13.4:
-    resolution: {integrity: sha512-1sCH6c8Sdlm9k1t+q8fA7ZSqPbw9248QNziqXIsUwboLTNucNLg47fxkzYTQdvSAZkqOnR34TcwlR9bWfTb0BA==}
+  /apollo-server-koa/3.11.1_graphql@15.8.0+koa@2.13.4:
+    resolution: {integrity: sha512-j4lL2qED+fmnAcPQiwy24POBE611cVnxKB6NQQOkG11zY2cxO5GHdDKSv2k1xjiDFQAykILL7Drl09PPEkIOCw==}
     engines: {node: '>=12.0'}
+    deprecated: The `apollo-server-koa` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/server` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     peerDependencies:
       graphql: ^15.3.0 || ^16.0.0
       koa: ^2.13.1
@@ -1366,8 +1372,8 @@ packages:
       '@types/koa-compose': 3.2.5
       '@types/koa__cors': 3.3.0
       accepts: 1.3.8
-      apollo-server-core: 3.10.4_graphql@15.8.0
-      apollo-server-types: 3.6.3_graphql@15.8.0
+      apollo-server-core: 3.11.1_graphql@15.8.0
+      apollo-server-types: 3.7.1_graphql@15.8.0
       graphql: 15.8.0
       koa: 2.13.4
       koa-bodyparser: 4.3.0
@@ -1376,21 +1382,23 @@ packages:
       - encoding
     dev: false
 
-  /apollo-server-plugin-base/3.6.3_graphql@15.8.0:
-    resolution: {integrity: sha512-/Q0Zx8N8La97faKV0siGHDzfZ56ygN6ovtUpPbr+1GIbNmUzkte3lWW2YV08HmxiRmC2i2OGN80exNJEvbKvNA==}
+  /apollo-server-plugin-base/3.7.1_graphql@15.8.0:
+    resolution: {integrity: sha512-g3vJStmQtQvjGI289UkLMfThmOEOddpVgHLHT2bNj0sCD/bbisj4xKbBHETqaURokteqSWyyd4RDTUe0wAUDNQ==}
     engines: {node: '>=12.0'}
+    deprecated: The `apollo-server-plugin-base` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/server` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     peerDependencies:
       graphql: ^15.3.0 || ^16.0.0
     dependencies:
-      apollo-server-types: 3.6.3_graphql@15.8.0
+      apollo-server-types: 3.7.1_graphql@15.8.0
       graphql: 15.8.0
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /apollo-server-types/3.6.3_graphql@15.8.0:
-    resolution: {integrity: sha512-+7caNTLdevpWI2dGKSa7CWdyudO3NBuJ3HzcrYxjBei6Bth9YdRUNzPSFmBjlm2baHF0GsrMwLpjO+HStJzm3A==}
+  /apollo-server-types/3.7.1_graphql@15.8.0:
+    resolution: {integrity: sha512-aE9RDVplmkaOj/OduNmGa+0a1B5RIWI0o3zC1zLvBTVWMKTpo0ifVf11TyMkLCY+T7cnZqVqwyShziOyC3FyUw==}
     engines: {node: '>=12.0'}
+    deprecated: The `apollo-server-types` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/server` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
     peerDependencies:
       graphql: ^15.3.0 || ^16.0.0
     dependencies:
