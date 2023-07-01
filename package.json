@@ -36,7 +36,7 @@
     "@types/nodemailer": "6.4.4",
     "axios": "0.27.2",
     "jest": "28.1.2",
-    "nodemon": "^2.0.20",
+    "nodemon": "^2.0.22",
     "prettier": "2.7.1",
     "rimraf": "^3.0.2",
     "ts-jest": "28.0.8",
