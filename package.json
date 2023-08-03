@@ -12,7 +12,7 @@
     "@koa/router": "^10.1.1",
     "apollo-server-koa": "3.10.4",
     "bcryptjs": "2.4.3",
-    "class-validator": "0.13.2",
+    "class-validator": "0.14.0",
     "cross-env": "7.0.3",
     "graphql": "15.8.0",
     "ioredis": "5.2.3",
